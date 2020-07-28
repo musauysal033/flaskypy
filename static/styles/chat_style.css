@@ -1,99 +1,73 @@
-body {
-    display: grid;
-    place-items: center;
-    background: linear-gradient(to left, #6fa3bb 0%, #074057 100%);
-    font-family: 'Patrick Hand', cursive;
-    /*sağdan sola  renk açışı*/
-}
 
 .wrapper {
-    display: grid;
-    min-width: 800px;
-    max-width: 1000px;
-    max-height: 800px;
-    width: 100%;
-    height: 100vh;
-    background: white;
-    place-items: center;
-}
-
-.navbar {
-    lighting-color: #ad673e;
-
+    display: flex;
 }
 
 #main-section {
-    overflow: hidden;
-    /* Makee this div contain its floated children */
+    overflow: hidden; /* Makee this div contain its floated children */
     width: 100%;
-    place-items: center;
 }
 
 #sidebar {
     margin-top: 2em;
-    float: left;
-    /* Make this div as wide as its contents */
-    min-height: 80vh;
+    float: left; /* Make this div as wide as its contents */
+    min-height: 96vh;
     padding-left: 1em;
     padding-top: 3em;
-    padding-right: 1em;
+    padding-right:1em;
     border-right: 0.5px solid #898c91;
 }
 
 #sidebar p {
     padding-left: 2em;
-    padding-right: 2em;
+    padding-right:2em;
 }
 
 #sidebar p:hover {
     background-color: #ffc107;
 }
 
-#sidebar h4 {
-    padding-left: 0.5em;
-}
+#sidebar h4 {padding-left: 0.5em;}
 
-#sidebar.view-sidebar {
-    display: none;
-}
+
+#sidebar.view-sidebar {display: none;}
 
 #show-sidebar-button {
-    place-items: center;
     visibility: hidden;
     opacity: 0;
     transition: visibility 0s, opacity 0.5s;
-    color: black;
-    /*sağdan sola  renk açışı*/
+    color: #335177;
 }
 
 @media (max-width: 567px) {
     #sidebar {
         display: none;
     }
+
     #sidebar.view-sidebar {
         display: block;
     }
+
     #show-sidebar-button {
         visibility: visible;
         opacity: 1;
     }
 }
 
+
 .cursor-pointer {
     cursor: pointer;
 }
 
 #rightside-pannel {
-    overflow: hidden;
-    /* Make this div take up the rest of the horizontal space, and no more */
+    overflow: hidden; /* Make this div take up the rest of the horizontal space, and no more */
 }
 
 #display-message-section {
     margin-top: 5em;
     min-height: 82vh;
     max-height: 82vh;
-    overflow-y: auto;
-    /*Make  this section scrolable */
+    overflow-y: auto; /*Make  this section scrolable */
 }
 
 #input-area {
@@ -102,22 +76,18 @@ body {
     bottom: 0;
 }
 
-input[type=text]:focus {
+input[type=text]:focus{
     border-color: #ffc107;
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.075) inset, 0px 0px 10px #ffc107;
 }
 
 @keyframes fadeIn {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
+  0% {opacity: 0;}
+  100% {opacity: 1;}
 }
 
 .others-msg {
-    margin-right: 7em;
+    margin-right:7em;
     margin-left: 1em;
     padding: 0.5em 0.5em 0.5em 1em;
     border-radius: 5px;
@@ -125,7 +95,6 @@ input[type=text]:focus {
     border-width: 0.5px;
     border-style: solid;
     background-color: #C2DBFB;
-    justify-items: end;
     /* animation */
     animation-name: fadeIn;
     animation-duration: 0.75s;
@@ -134,14 +103,13 @@ input[type=text]:focus {
 }
 
 .my-msg {
-    margin-left: 7em;
-    margin-right: 1em;
+    margin-left:7em;
+    margin-right:1em;
     padding: 0.5em 0.5em 0.5em 1em;
     border-radius: 5px;
-    border-color: black;
+    border-color: #206ED2;
     border-width: 1px;
     border-style: solid;
-    justify-items: start;
     /* animation */
     animation-name: fadeIn;
     animation-duration: 0.75s;
@@ -150,16 +118,16 @@ input[type=text]:focus {
 }
 
 .system-msg {
-    margin-right: 7em;
+    margin-right:7em;
     margin-left: 1em;
     padding: 0.5em 0.5em 0.5em 1em;
     color: #656d78;
-    font-size: 0.9em;
+    font-size:0.9em;
 }
 
 .timestamp {
     color: #656d78;
-    font-size: 0.7em;
+    font-size:0.7em;
 }
 
 .other-username {
