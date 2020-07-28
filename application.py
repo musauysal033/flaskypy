@@ -98,7 +98,7 @@ def join(data):
 @socketio.on('leave')
 def leave(data):
     leave_room(data['room'])
-    send({'msg': data['username'] + " has left the " + data['room'] + "room."}, room=data['room'])
+    send({'msg': data['username'] + " has left the " + data['room'] + " room."}, room=data['room'])
 
 
 if __name__ == "__main__":
