@@ -10,7 +10,7 @@ from models import *
 # Configure app
 app = Flask(__name__)
 app.secret_key=os.environ.get('SECRET')
-app.config['WTF_CSRF_SECRET_KEY'] = "b'-G4>-{*\x1d\x81\xad\xeaoP\x9a\tt'"
+app.config['WTF_CSRF_SECRET_KEY'] = "b'\xf12\xfd\x0b\xdf\xd1\x95H\x898W\x87l\xc5Z\x02'"
 
 # Configure database
 app.config['SQLALCHEMY_DATABASE_URI']=os.environ.get('DATABASE_URL')
