@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded', () =>{
     document.querySelectorAll('.select-room').forEach(p =>{
         p.onclick =  () => {
             let newRoom =p.innerHTML;
-            if (newRoom == room){
+            if (newRoom === room){
                 msg = `You are already in ${room} room.`
                 printSysMsg(msg);
             }else{
