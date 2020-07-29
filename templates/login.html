@@ -1,21 +1,35 @@
+<!DOCTYPE html>
 {% from 'field-macro.html' import displayField %}
-{% extends 'prelogin-layout.html' %}
+{% extends "prelogin-layout.html" %}
 
 {% block title %}Login {% endblock %}
 
 {% block content %}
-    <h2>Login now!</h2>
-    <p>Enter your username/password to start flaskypy</p>
-    <form action="{{ url_for('login')}}" method="POST">
-        {{ displayField(form.username, 'Username', autocomplete="off",
-            autofocus=true)}}
-        {{ displayField(form.password, 'Password')}}
 
+<html>
+<link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/login.css') }}">
 
-        <div>
-            {{ form.submit_button }}
-        </div>
+<div class="outer-box">
+    <div class="login-box">
+        <h2 class="login-text">Login now!</h2>
+            <center>
+            <p>Enter you username/password to start RChat</p>
 
-        {{ form.csrf_token }}
-    </form>
+            <form action="{{ url_for('login') }}", method="POST">
+            {{ displayField(form.username, 'Username', autocomplete="off", autofocus=true) }}
+            {{ displayField(form.password, 'Password') }}
+            <div class="form-group">
+                <input type="submit" value="Login" class="btn btn-warning">
+            </div>
+            {{ form.csrf_token }}
+            </form>
+
+            <hr>
+            <p>Have not registered? <a href={{url_for('index')}}>Register here</a>.</p>
+            </center>
+    </div>
+</div>
+
+</html>
 {% endblock %}
