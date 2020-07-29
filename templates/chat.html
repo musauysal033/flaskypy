@@ -59,7 +59,9 @@
     </div>
 
     <!-- Get username -->
-    <span id="get-username"></span>
+    <script type="text/javascript">
+        const username =`{{ username }}`;
+    </script>
     <!--  custom chat js -->
     <script src="{{ url_for('static', filename='scripts/chat_page.js') }}">
     </script>
