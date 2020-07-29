@@ -3,13 +3,15 @@ body {
     height: 95vh;
     /*sağdan sola  renk açışı*/
     border-radius: 20px;
-    background: white;
+    background: url('//styles/b.jpg');
 }
 
 .wrapper {
     display: flex;
-     background: url('//styles/b.jpg');
+    background: white;
     opacity: 0.8;
+    width: 70%;
+    height: 50%;
 }
 
 #main-section {
