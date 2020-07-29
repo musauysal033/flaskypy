@@ -1,14 +1,15 @@
 body {
-    width: 100%;
+    width: 80%;
     height: 95vh;
     /*sağdan sola  renk açışı*/
     border-radius: 20px;
-    background: url('//styles/b.jpg');
-    opacity: 0.8;
+    background: white;
 }
 
 .wrapper {
     display: flex;
+     background: url('//styles/b.jpg');
+    opacity: 0.8;
 }
 
 #main-section {
