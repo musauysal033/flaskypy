@@ -4,7 +4,7 @@ body {
     /*sağdan sola  renk açışı*/
     border-radius: 20px;
     opacity: 90%;
-    background: url('../scripts/styles/b.jpg');
+    background: url('../styles/b.jpg');
     opacity: 0.8;
 }
 
