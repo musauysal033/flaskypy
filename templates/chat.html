@@ -35,16 +35,14 @@
             <div id="input-area">
                 <input type="text" id="user_message" placeholder="Type here..." autocomplete="off">
                 <div class="input-group-append">
-                <button type="button" id="send_message">SEND</button>
+                <button type="button" class="btn btn-warning" id="send_message">SEND <i class="fas fa-paper-plane"></i></button>
                 </div>
             </div>
         </div>
     </div>
 
     <!-- Get username -->
-    <script type="text/javascript">
-        const username =`{{ username }}`;
-    </script>
+    <span id="get-username"></span>
     <!--  custom chat js -->
     <script src="{{ url_for('static', filename='scripts/chat_page.js') }}">
     </script>
