@@ -108,6 +108,7 @@ input[type=text]:focus {
     padding: 0.5em 0.5em 0.5em 1em;
     border-radius: 5px;
     border-color: #ffffff;
+    font-palette: light;
     border-width: 0.5px;
     border-style: solid;
     background-color: #C2DBFB;
@@ -122,6 +123,7 @@ input[type=text]:focus {
     border-radius: 5px;
     border-color: #206ED2;
     border-width: 1px;
+    font-palette: light;
     border-style: solid;
     /* animation */
 
@@ -130,6 +132,7 @@ input[type=text]:focus {
 .system-msg {
     margin-right: 7em;
     margin-left: 1em;
+    font-palette: light;
     padding: 0.5em 0.5em 0.5em 1em;
     color: #ffffff;
     font-size: 0.9em;
