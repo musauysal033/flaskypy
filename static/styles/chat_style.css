@@ -3,7 +3,6 @@ body {
     height: 95vh;
     /*sağdan sola  renk açışı*/
     border-radius: 20px;
-    opacity: 90%;
     background: url('../styles/b.jpg');
     opacity: 0.8;
 }
@@ -113,10 +112,7 @@ input[type=text]:focus {
     border-style: solid;
     background-color: #C2DBFB;
     /* animation */
-    animation-name: fadeIn;
-    animation-duration: 0.75s;
-    animation-fill-mode: forwards;
-    animation-timing-function: ease-in-out;
+
 }
 
 .my-msg {
@@ -128,10 +124,7 @@ input[type=text]:focus {
     border-width: 1px;
     border-style: solid;
     /* animation */
-    animation-name: fadeIn;
-    animation-duration: 0.75s;
-    animation-fill-mode: forwards;
-    animation-timing-function: ease-in-out;
+
 }
 
 .system-msg {
