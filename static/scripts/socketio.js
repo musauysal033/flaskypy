@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const span_timestamp = document.createElement('span');
             const br = document.createElement('br')
             // Display user's own message
-            if (data.username == username) {
+            if (data.username === username) {
                     p.setAttribute("class", "my-msg");
 
                     // Username
