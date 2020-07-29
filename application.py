@@ -10,11 +10,11 @@ from models import *
 # Configure app
 app = Flask(__name__)
 app.secret_key=os.environ.get('SECRET')
-#app.config['WTF_CSRF_SECRET_KEY'] = "b'\xf12\xfd\x0b\xdf\xd1\x95H\x898W\x87l\xc5Z\x02'"
+app.config['WTF_CSRF_SECRET_KEY'] = "b'f\xfa\x8b{X\x8b\x9eM\x83l\x19\xad\x84\x08\xaa"
 
 # Configure database
 app.config['SQLALCHEMY_DATABASE_URI']=os.environ.get('DATABASE_URL')
-#app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
 
 # Initialize login manager
@@ -81,9 +81,9 @@ def logout():
 @app.route("/chat", methods=['GET', 'POST'])
 def chat():
 
-    #if not current_user.is_authenticated:
-        #flash('Please login', 'danger')
-        #return redirect(url_for('login'))
+    if not current_user.is_authenticated:
+        flash('Please login', 'danger')
+        return redirect(url_for('login'))
 
     return render_template("chat.html", username=current_user.username, rooms=ROOMS)
 
@@ -128,5 +128,4 @@ def on_leave(data):
     send({"msg": username + " has left the room"}, room=room)
 
 if __name__ == "__main__":
-    app.run()
-
+    app.run(debug=True)
