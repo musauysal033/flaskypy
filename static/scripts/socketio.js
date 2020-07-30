@@ -81,7 +81,7 @@ document.addEventListener('DOMContentLoaded', () => {
         p.onclick = () => {
             let newRoom = p.innerHTML
                 // Check if user already in the room
-            if (newRoom === room) {
+            if (newRoom == room) {
                 msg = `You are already in ${room} room.`;
                 printSysMsg(msg);
             } else {
