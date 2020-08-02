@@ -82,26 +82,53 @@ def logout():
     return redirect(url_for('login'))
 
 
-@socketio.on('message')
+"""@socketio.on('message')
 def message(data):
 
     print(f"\n\n{data}\n\n")
-    send({'msg': data['msg'], 'username': data['username'], 'time_stamp': strftime('%b-%d-%I:%M%p', localtime())}, room=data['room'])
+    send({'msg': data['msg'], 'username': data['username'], 'time_stamp': strftime('%b-%d-%I:%M%p', localtime())}, room=data['room'])"""
+@socketio.on('incoming-msg')
+def on_message(data):
+    """Broadcast messages"""
+
+    msg = data["msg"]
+    username = data["username"]
+    room = data["room"]
+    # Set timestamp
+    time_stamp = time.strftime('%b-%d %I:%M%p', time.localtime())
+    send({"username": username, "msg": msg, "time_stamp": time_stamp}, room=room)
 
 
-@socketio.on('join')
+"""@socketio.on('join')
 def join(data):
 
     join_room(data['room'])
-    send({'msg': data['username'] + "has joined the " + data['room'] + "room."}, room=data['room'])
+    send({'msg': data['username'] + "has joined the " + data['room'] + "room."}, room=data['room'])"""
+@socketio.on('join')
+def on_join(data):
+    """User joins a room"""
+
+    username = data["username"]
+    room = data["room"]
+    join_room(room)
+
+    # Broadcast that new user has joined
+    send({"msg": username + " has joined the " + room + " room."}, room=room)
 
 
 
-@socketio.on('leave')
+"""@socketio.on('leave')
 def leave(data):
     leave_room(data['room'])
-    send({'msg': data['username'] + " has left the " + data['room'] + "room."}, room=data['room'])
+    send({'msg': data['username'] + " has left the " + data['room'] + "room."}, room=data['room'])"""
+@socketio.on('leave')
+def on_leave(data):
+    """User leaves a room"""
 
+    username = data['username']
+    room = data['room']
+    leave_room(room)
+    send({"msg": username + " has left the room"}, room=room)
 
 
 if __name__ == "__main__":
