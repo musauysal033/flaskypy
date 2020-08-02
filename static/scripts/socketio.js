@@ -45,7 +45,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
                 // HTML to append
                 p.innerHTML += span_username.outerHTML + br.outerHTML + data.msg + br.outerHTML + span_timestamp.outerHTML
-                console.log(p.innerHTML)
+                console.log(p)
                 //Append
                 document.querySelector('#display-message-section').append(p);
             }
