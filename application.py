@@ -18,7 +18,8 @@ app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('DATABASE_URL')
 db = SQLAlchemy(app)
 
 #Initialize Flask-SocketIO
-socketio = SocketIO(app)
+#menage_session=False eklendi
+socketio = SocketIO(app, menage_session=False)
 ROOMS = ["lounge", "news", "games","coding"]
 
 # Configure flask login
@@ -132,4 +133,4 @@ def on_leave(data):
 
 
 if __name__ == "__main__":
-    app.run()
+    app.run(debug=True)
