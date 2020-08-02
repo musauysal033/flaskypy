@@ -26,6 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Display current message
         if (data.msg) {
+            console.log(data.msg)
             const p = document.createElement('p');
             const span_username = document.createElement('span');
             const span_timestamp = document.createElement('span');
