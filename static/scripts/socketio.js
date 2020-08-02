@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Display current message
         if (data.msg) {
-            console.log(data.msg)
+
             const p = document.createElement('p');
             const span_username = document.createElement('span');
             const span_timestamp = document.createElement('span');
@@ -45,7 +45,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
                 // HTML to append
                 p.innerHTML += span_username.outerHTML + br.outerHTML + data.msg + br.outerHTML + span_timestamp.outerHTML
-
+                console.log(p.innerHTML)
                 //Append
                 document.querySelector('#display-message-section').append(p);
             }
