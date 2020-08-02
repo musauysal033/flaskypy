@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const span_timestamp = document.createElement('span');
             const br = document.createElement('br')
                 // Display user's own message
-            if (data.username == username) {
+            if (data.username === username) {
                 p.setAttribute("class", "my-msg");
 
                 // Username
@@ -81,7 +81,7 @@ document.addEventListener('DOMContentLoaded', () => {
         p.onclick = () => {
             let newRoom = p.innerHTML
                 // Check if user already in the room
-            if (newRoom == room) {
+            if (newRoom === room) {
                 msg = `You are already in ${room} room.`;
                 printSysMsg(msg);
             } else {
