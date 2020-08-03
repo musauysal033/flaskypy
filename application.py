@@ -1,7 +1,7 @@
 import os
 
 from time import localtime, strftime, time
-from flask import Flask, render_template, url_for, redirect, flash
+from flask import Flask, render_template, url_for, redirect, flash, request, flash
 from flask_login import LoginManager, login_user, current_user, logout_user, login_required
 from flask_socketio import SocketIO, send, emit, join_room, leave_room
 
@@ -19,7 +19,7 @@ db = SQLAlchemy(app)
 
 #Initialize Flask-SocketIO
 #menage_session=False eklendi
-socketio = SocketIO(app, menage_session=False)
+
 ROOMS = ["lounge", "news", "games","coding"]
 
 # Configure flask login
@@ -29,6 +29,8 @@ login.init_app(app)
 @login.user_loader
 def load_user(id):
     return User.query.get(int(id))
+
+socketio = SocketIO(app, menage_session=False)
 
 @app.route("/", methods=['GET', 'POST'])
 def index():
