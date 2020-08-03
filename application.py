@@ -6,16 +6,20 @@ from flask_login import LoginManager, login_user, current_user, logout_user, log
 from flask_socketio import SocketIO, send, emit, join_room, leave_room
 
 from wtform_fields import *
-from models import *
+from models import User, db
 
 
 #confirm app
 app= Flask(__name__)
+socketio = SocketIO(app, menage_session=False)
 app.secret_key = os.environ.get('SECRET')
+
 
 # Configure database
 app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('DATABASE_URL')
-db = SQLAlchemy(app)
+
+db.init_app(app)
+
 
 #Initialize Flask-SocketIO
 #menage_session=False eklendi
@@ -23,6 +27,7 @@ db = SQLAlchemy(app)
 ROOMS = ["lounge", "news", "games","coding"]
 
 # Configure flask login
+
 login = LoginManager(app)
 login.init_app(app)
 
@@ -30,7 +35,7 @@ login.init_app(app)
 def load_user(id):
     return User.query.get(int(id))
 
-socketio = SocketIO(app, menage_session=False)
+
 
 @app.route("/", methods=['GET', 'POST'])
 def index():
@@ -98,7 +103,7 @@ def on_message(data):
     username = data["username"]
     room = data["room"]
     # Set timestamp
-    time_stamp = time.strftime('%b-%d %I:%M%p', time.localtime())
+    time_stamp = strftime('%b-%d %I:%M%p', localtime())
     send({"username": username, "msg": msg, "time_stamp": time_stamp}, room=room)
 
 
@@ -135,4 +140,4 @@ def on_leave(data):
 
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    socketio.run(app, debug=True)
