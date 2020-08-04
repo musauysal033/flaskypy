@@ -8,7 +8,7 @@
 
 #main-section {
     overflow: hidden; /* Makee this div contain its floated children */
-    width: 100%;
+    width: 80%;
 }
 
 #sidebar {
@@ -27,7 +27,8 @@
 }
 
 #sidebar p:hover {
-    background-color: #ffc107;
+
+    background-color: #282828;
 }
 
 #sidebar h4 {padding-left: 0.5em;}
