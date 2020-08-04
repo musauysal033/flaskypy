@@ -95,14 +95,14 @@ input[type=text]:focus{
 
 .others-msg {
     justify-items: start;
-    margin-right:7em;
-    margin-left: 1em;
+    margin-right:4em;
+    margin-left: 4em;
     padding: 0.5em 0.5em 0.5em 1em;
-    border-radius: 5px;
+    border-radius: 10px;
     border-color: grey;
     border-width: 0.5px;
     border-style: solid;
-    background-color: #C2DBFB;
+    background-color: #797979;
     /* animation */
     animation-name: fadeIn;
     animation-duration: 0.75s;
@@ -112,10 +112,10 @@ input[type=text]:focus{
 
 .my-msg {
     justify-items: end;
-    margin-left:7em;
-    margin-right:1em;
+    margin-left:4em;
+    margin-right:4em;
     padding: 0.5em 0.5em 0.5em 1em;
-    border-radius: 5px;
+    border-radius: 10px;
     border-color: #282828;
     border-width: 1px;
     border-style: solid;
@@ -148,7 +148,7 @@ input[type=text]:focus{
 .my-username {
     font-weight: bold;
     font-size: 1.1em;
-    color: #FF6B13;
+    color: #152374;
 }
 
 #msg-input {
