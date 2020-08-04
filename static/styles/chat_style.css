@@ -41,7 +41,7 @@ body{
 
 #show-sidebar-button {
     visibility: hidden;
-    opacity: 0;
+    opacity: 0.5;
     transition: visibility 0s, opacity 0.5s;
     color: #335177;
 }
@@ -71,6 +71,7 @@ body{
 }
 
 #display-message-section {
+    width: 50%;
     margin-top: 5em;
     min-height: 40vh;
     max-height: 40vh;
@@ -94,6 +95,7 @@ input[type=text]:focus{
 }
 
 .others-msg {
+    opacity: 50%;
     justify-items: start;
     margin-right:4em;
     margin-left: 4em;
