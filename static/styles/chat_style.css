@@ -69,8 +69,8 @@
 
 #display-message-section {
     margin-top: 5em;
-    min-height: 82vh;
-    max-height: 82vh;
+    min-height: 40vh;
+    max-height: 40vh;
     overflow-y: auto; /*Make  this section scrolable */
 }
 
@@ -91,6 +91,7 @@ input[type=text]:focus{
 }
 
 .others-msg {
+    justify-items: start;
     margin-right:7em;
     margin-left: 1em;
     padding: 0.5em 0.5em 0.5em 1em;
@@ -107,11 +108,12 @@ input[type=text]:focus{
 }
 
 .my-msg {
+    justify-items: end;
     margin-left:7em;
     margin-right:1em;
     padding: 0.5em 0.5em 0.5em 1em;
     border-radius: 5px;
-    border-color: #206ED2;
+    border-color: #282828;
     border-width: 1px;
     border-style: solid;
     /* animation */
