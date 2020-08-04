@@ -1,6 +1,9 @@
 
 .wrapper {
     display: flex;
+    width: 80%;
+    height: 95vh;
+    background: url("../styles/b.jpg");
 }
 
 #main-section {
