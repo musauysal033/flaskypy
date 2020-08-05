@@ -1,6 +1,14 @@
 .wrapper {
-    display: flex;
-
+    place-items: center;
+    display: grid;
+    max-height: 800px;
+    max-width: 1350px;
+    width: 100%;
+    background: white;
+    border-radius: 20px;
+    opacity: 90%;
+    margin-left: 250px;
+    margin-right: 250px;
 }
 
 #main-section {
@@ -69,8 +77,8 @@
 #display-message-section {
     width: 100%;
     margin-top: 5em;
-    min-height: 81vh;
-    max-height: 81vh;
+    min-height: 68vh;
+    max-height: 68vh;
     overflow-y: auto; /*Make  this section scrolable */
 }
 
@@ -91,6 +99,7 @@ input[type=text]:focus{
 }
 
 .others-msg {
+    font-palette: light;
     opacity: 50%;
     margin-right:7em;
     margin-left: 1em;
@@ -99,7 +108,7 @@ input[type=text]:focus{
     border-color: grey;
     border-width: 0.5px;
     border-style: solid;
-    background-color: #3394e0;
+    background-color: #423d3d;
     /* animation */
     animation-name: fadeIn;
     animation-duration: 0.75s;
