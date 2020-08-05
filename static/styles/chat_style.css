@@ -6,7 +6,7 @@
     width: 100%;
     background: white;
     border-radius: 20px;
-    opacity: 90%;
+    opacity: 85%;
     margin-left: 250px;
     margin-right: 250px;
 }
@@ -99,8 +99,8 @@ input[type=text]:focus{
 }
 
 .others-msg {
-    font-palette: white;
-    opacity: 50%;
+    color: white;
+    opacity: 80%;
     margin-right:7em;
     margin-left: 1em;
     padding: 0.5em 0.5em 0.5em 1em;
@@ -108,7 +108,7 @@ input[type=text]:focus{
     border-color: grey;
     border-width: 0.5px;
     border-style: solid;
-    background-color: #423d3d;
+    background-color: #0095ff;
     /* animation */
     animation-name: fadeIn;
     animation-duration: 0.75s;
