@@ -71,10 +71,10 @@ body{
 }
 
 #display-message-section {
-    width: 50%;
+    width: 90%;
     margin-top: 5em;
-    min-height: 40vh;
-    max-height: 40vh;
+    min-height: 81vh;
+    max-height: 81vh;
     overflow-y: auto; /*Make  this section scrolable */
 }
 
@@ -113,6 +113,8 @@ input[type=text]:focus{
 }
 
 .my-msg {
+    opacity: 0.8%;
+    background: white;
     justify-items: end;
     margin-left:4em;
     margin-right:4em;
