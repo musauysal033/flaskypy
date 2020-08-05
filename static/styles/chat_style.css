@@ -1,7 +1,7 @@
 .wrapper {
     place-items: center;
     display: grid;
-    max-height: 800px;
+    max-height: 900px;
     max-width: 1350px;
     width: 100%;
     background: white;
@@ -77,8 +77,8 @@
 #display-message-section {
     width: 100%;
     margin-top: 5em;
-    min-height: 68vh;
-    max-height: 68vh;
+    min-height: 78vh;
+    max-height: 78vh;
     overflow-y: auto; /*Make  this section scrolable */
 }
 
@@ -99,7 +99,7 @@ input[type=text]:focus{
 }
 
 .others-msg {
-    font-palette: light;
+    font-palette: white;
     opacity: 50%;
     margin-right:7em;
     margin-left: 1em;
@@ -137,7 +137,7 @@ input[type=text]:focus{
     margin-right:7em;
     margin-left: 1em;
     padding: 0.5em 0.5em 0.5em 1em;
-    color: #ffffff;
+    color: #000000;
     font-size:0.9em;
 }
 
@@ -149,7 +149,7 @@ input[type=text]:focus{
 .other-username {
     font-weight: bold;
     font-size: 1.1em;
-    color: #975604;
+    color: #ff9304;
 }
 
 .my-username {
